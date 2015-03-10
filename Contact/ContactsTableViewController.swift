@@ -25,6 +25,9 @@ class ContactsTableViewController: UITableViewController {
         
         let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
         self.navigationItem.leftBarButtonItem = moveButton
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addContact"))
+        self.navigationItem.rightBarButtonItem = addButton
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -56,7 +59,6 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        
         let contact = self.contacts[indexPath.row]
         
         // textLabel ought to be optional
@@ -112,6 +114,17 @@ class ContactsTableViewController: UITableViewController {
         return false
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
+    func addContact() {
+        let newContact = Contact(name:"New Contact")
+        self.contacts.append(newContact)
+        let newIndexPath = NSIndexPath(forRow: self.contacts.count-1, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Automatic)
+    }
 
     /*
     // Override to support conditional editing of the table view.
