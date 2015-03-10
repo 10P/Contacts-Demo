@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC7841E21AAD29C800C91317 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7841E11AAD29C800C91317 /* DetailViewController.swift */; };
 		CC7B5A1B1AA90FB2007BDC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B5A1A1AA90FB2007BDC31 /* AppDelegate.swift */; };
 		CC7B5A1D1AA90FB2007BDC31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B5A1C1AA90FB2007BDC31 /* ViewController.swift */; };
 		CC7B5A201AA90FB2007BDC31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7B5A1E1AA90FB2007BDC31 /* Main.storyboard */; };
 		CC7B5A221AA90FB2007BDC31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7B5A211AA90FB2007BDC31 /* Images.xcassets */; };
 		CC7B5A251AA90FB2007BDC31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7B5A231AA90FB2007BDC31 /* LaunchScreen.xib */; };
 		CC7B5A311AA90FB2007BDC31 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B5A301AA90FB2007BDC31 /* ContactTests.swift */; };
+		CC7B5A3B1AA918C2007BDC31 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B5A3A1AA918C2007BDC31 /* ContactsTableViewController.swift */; };
+		CC7CA3001AAAA8240035B1BC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA2FF1AAAA8240035B1BC /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC7841E11AAD29C800C91317 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CC7B5A151AA90FB2007BDC31 /* Contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7B5A191AA90FB2007BDC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC7B5A1A1AA90FB2007BDC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		CC7B5A2A1AA90FB2007BDC31 /* ContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7B5A2F1AA90FB2007BDC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC7B5A301AA90FB2007BDC31 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
+		CC7B5A3A1AA918C2007BDC31 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		CC7CA2FF1AAAA8240035B1BC /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				CC7B5A1A1AA90FB2007BDC31 /* AppDelegate.swift */,
 				CC7B5A1C1AA90FB2007BDC31 /* ViewController.swift */,
 				CC7B5A1E1AA90FB2007BDC31 /* Main.storyboard */,
+				CC7841E11AAD29C800C91317 /* DetailViewController.swift */,
+				CC7B5A3A1AA918C2007BDC31 /* ContactsTableViewController.swift */,
+				CC7CA2FF1AAAA8240035B1BC /* Contact.swift */,
 				CC7B5A211AA90FB2007BDC31 /* Images.xcassets */,
 				CC7B5A231AA90FB2007BDC31 /* LaunchScreen.xib */,
 				CC7B5A181AA90FB2007BDC31 /* Supporting Files */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7CA3001AAAA8240035B1BC /* Contact.swift in Sources */,
 				CC7B5A1D1AA90FB2007BDC31 /* ViewController.swift in Sources */,
+				CC7841E21AAD29C800C91317 /* DetailViewController.swift in Sources */,
 				CC7B5A1B1AA90FB2007BDC31 /* AppDelegate.swift in Sources */,
+				CC7B5A3B1AA918C2007BDC31 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				CC7B5A361AA90FB2007BDC31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC7B5A371AA90FB2007BDC31 /* Build configuration list for PBXNativeTarget "ContactTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				CC7B5A391AA90FB2007BDC31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
