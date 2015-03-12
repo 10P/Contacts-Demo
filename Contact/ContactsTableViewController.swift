@@ -24,7 +24,7 @@ class ContactsTableViewController: UITableViewController {
         self.contacts.append(mindy)
         
         let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
-        self.navigationItem.leftBarButtonItem = moveButton
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addContact"))
         self.navigationItem.rightBarButtonItem = addButton
@@ -63,9 +63,9 @@ class ContactsTableViewController: UITableViewController {
         
         // textLabel ought to be optional
         if let name = contact.name {
-            cell.textLabel.text = name
+            cell.textLabel?.text = name
         } else {
-            cell.textLabel.text = "No name"
+            cell.textLabel?.text = "No name"
         }
 
         return cell
